@@ -32,7 +32,7 @@ for row in trainingsetAttributes:
     featureDictTrain = {"uri":URI}
     ID = row[0].replace('"','')
     featureDictTrain.update({"ID":ID})
-    populateFeatureAll(featureDictTrain)
+    populateFeatureAll(featureDictTrain,"http://localhost:8891/sparql")
     featureListTrain.append(featureDictTrain)
 
 
