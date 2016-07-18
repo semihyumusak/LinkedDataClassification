@@ -33,6 +33,8 @@ for row in trainingsetAttributes:
     ID = row[0].replace('"','')
     featureDictTrain.update({"ID":ID})
     populateFeatureAll(featureDictTrain,"http://localhost:8891/sparql")
+    print (i)
+    i = i+1
     featureListTrain.append(featureDictTrain)
 
 
