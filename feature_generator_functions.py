@@ -23,7 +23,7 @@ def getAttributeWithoutCaching( sparqlquery, featDict,endpoint):
             #print(result)
             #print ("%s %s %s"%s,p,o)
             featDict.update({p:o})
-            print (s +"\t"+p+"\t"+o)
+            #print (s +"\t"+p+"\t"+o)
         for result in results["results"]["bindings"]:
             featDict.update({result["p"]["value"]:result["o"]["value"]})
     except BaseException as b:
