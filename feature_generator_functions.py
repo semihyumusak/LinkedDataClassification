@@ -1,4 +1,4 @@
-
+import hashlib
 import time
 def is_number(s):
     try:
@@ -31,9 +31,12 @@ def getAttributeWithoutCaching( sparqlquery, featDict,endpoint):
                     featDict.update({result["p"]["value"]:result["o"]["value"]})
                 else :
                     if is_number(result["o"]["value"]):
-                        featDict.update({result["p"]["value"]:float(result["o"]["value"])})
+                        if not result["p"]["value"].endswith("ID"):
+                            featDict.update({result["p"]["value"]:int(float(result["o"]["value"]))})
+                        else:
+                            print (result["p"]["value"] +" neglected")
                     else:
-                        featDict.update({result["p"]["value"]:result["o"]["value"]})
+                        featDict.update({result["p"]["value"]:hashlib.md5(result["o"]["value"].encode("UTF8")).hexdigest()})
         except BaseException as b:
             print (b)
     except BaseException as b:

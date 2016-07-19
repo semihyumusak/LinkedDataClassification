@@ -1,7 +1,7 @@
 import os.path
 import pickle
 import re
-
+from sklearn.feature_selection import VarianceThreshold
 from SPARQLWrapper import SPARQLWrapper, JSON
 from feature_generator_functions import populateFeatureAll
 from feature_generator_functions import k_fold_generator
@@ -11,7 +11,7 @@ from feature_generator_functions import getAttributeWithoutCaching
 # Load of attribute and test values
 with open('trainingDataset.tsv','r') as f:
     trainingsetAttributes=[x.strip().split('\t') for x in f][1:]
-with open('testDataset.tsv','r') as f:
+with open('testDatasetLabeled.tsv','r') as f:
     testsetAttributes=[x.strip().split('\t') for x in f][1:]
 
 # # Query caching prevents the algorithm to send DBpedia requests if it is already in the local storage
@@ -25,8 +25,8 @@ with open('testDataset.tsv','r') as f:
 i = 0
 featureListTest = []
 featureListTrain = []
-#endpoint = "http://dbpedia.org/sparql"
-endpoint = "http://localhost:8891/sparql"
+endpoint = "http://dbpedia.org/sparql"
+#endpoint = "http://localhost:8891/sparql"
 # Initialize Feature Sets
 for row in trainingsetAttributes:
     URI = row[1].replace('"','')
@@ -50,9 +50,13 @@ if os.path.isfile('traindumpv3') and os.path.isfile('testdumpv3'):
 else:
     # Populate Features
     for featDict in featureListTrain:
-            populateFeatureAll(featDict,endpoint)
+        i= i+1
+        print(i)
+        populateFeatureAll(featDict,endpoint)
     for featDict in featureListTest:
-            populateFeatureAll(featDict,endpoint)
+        i= i+1
+        print(i)
+        populateFeatureAll(featDict,endpoint)
 
     with open('traindumpv3','wb') as f:
         pickle.dump(featureListTrain, f)
@@ -61,24 +65,38 @@ else:
 
 with open('trainingDataset.tsv','r') as f:
     trainingsetLabels=[x.strip().split('\t')[6] for x in f][1:]
+with open('testDatasetLabeled.tsv','r') as f:
+    testsetLabels=[x.strip().split('\t')[6] for x in f][1:]
 
 X=featureListTrain
 y= trainingsetLabels
 
 from sklearn.svm import SVC
 from sklearn.feature_extraction import DictVectorizer
+from sklearn.feature_selection import SelectKBest, chi2
+from sklearn.feature_selection import VarianceThreshold
+import numpy
+import hashlib
 vec = DictVectorizer()
-
-
 fit = vec.fit(X)
-X_train_counts = fit.transform(X)
-X_test_counts = fit.transform(featureListTest)
+
+#support = SelectKBest(chi2,k=10).fit(fit.transform(X),y)
+selector = VarianceThreshold(threshold=1)
+
+#fit = fit.restrict(support.get_support())
+selector = selector.fit(fit.transform(X))
+
+
+X_train_counts = selector.transform(fit.transform(X))# fit.transform(X)
+X_test_counts = selector.transform(fit.transform(featureListTest)) # fit.transform(featureListTest)
 clf = SVC(kernel="linear", C=0.025)
 clf.fit(X_train_counts.toarray(), y)
-predict = clf.predict(X_test_counts.toarray())
+#predict = clf.predict(X_test_counts.toarray())
 
-for v in predict:
-    print(v)
+print("score " + str(clf.score(X_test_counts.toarray(),testsetLabels)))
+exit()
+#for v in predict:
+#    print(v)
 
 try:
         accuracy = 0.0
