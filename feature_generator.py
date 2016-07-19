@@ -9,7 +9,7 @@ from feature_generator_functions import getAttributeWithoutCaching
 
 
 # Load of attribute and test values
-with open('trainingDataset.tsv','r') as f:
+with open('trainingDatasetSample.tsv','r') as f:
     trainingsetAttributes=[x.strip().split('\t') for x in f][1:]
 with open('testDatasetLabeled.tsv','r') as f:
     testsetAttributes=[x.strip().split('\t') for x in f][1:]
@@ -25,8 +25,8 @@ with open('testDatasetLabeled.tsv','r') as f:
 i = 0
 featureListTest = []
 featureListTrain = []
-#endpoint = "http://dbpedia.org/sparql"
-endpoint = "http://localhost:8891/sparql"
+endpoint = "http://dbpedia.org/sparql"
+#endpoint = "http://localhost:8891/sparql"
 # Initialize Feature Sets
 for row in trainingsetAttributes:
     URI = row[1].replace('"','')
@@ -63,7 +63,7 @@ else:
     with open('testdumpv3','wb') as f:
         pickle.dump(featureListTest, f)
 
-with open('trainingDataset.tsv','r') as f:
+with open('trainingDatasetSample.tsv','r') as f:
     trainingsetLabels=[x.strip().split('\t')[6] for x in f][1:]
 with open('testDatasetLabeled.tsv','r') as f:
     testsetLabels=[x.strip().split('\t')[6] for x in f][1:]
