@@ -52,4 +52,6 @@ vec = DictVectorizer()
 
 fit = vec.fit(X)
 
-print (fit.get_feature_names())
+for f in fit.get_feature_names():
+    if "=" not in f:
+        print(f)

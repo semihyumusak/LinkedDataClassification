@@ -1,6 +1,11 @@
 
 import time
-
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
 import re
 from SPARQLWrapper import SPARQLWrapper, JSON,RDF, POST, GET, SELECT, CONSTRUCT, ASK, DESCRIBE
 def populateFeatureAll (featDict, endpoint):
@@ -13,16 +18,22 @@ def getAttributeWithoutCaching( sparqlquery, featDict,endpoint):
     try:
         sparql = SPARQLWrapper(endpoint)
         sparql.setQuery(sparqlqueryConstruct)
-        sparql.setReturnFormat(RDF)
+        sparql.setReturnFormat(JSON)
         results = sparql.query().convert()
         try:
-            for s,p,o in results:
+            #for s,p,o in results:
                 #print(result)
                 #print ("%s %s %s"%s,p,o)
-                featDict.update({p:o})
+#                featDict.update({p:o})
                 #print (s +"\t"+p+"\t"+o)
-            #for result in results["results"]["bindings"]:
-            #    featDict.update({result["p"]["value"]:result["o"]["value"]})
+            for result in results["results"]["bindings"]:
+                if is_number(result["o"]["value"]) is int or type(result["o"]["value"]) is float :
+                    featDict.update({result["p"]["value"]:result["o"]["value"]})
+                else :
+                    if is_number(result["o"]["value"]):
+                        featDict.update({result["p"]["value"]:float(result["o"]["value"])})
+                    else:
+                        featDict.update({result["p"]["value"]:result["o"]["value"]})
         except BaseException as b:
             print (b)
     except BaseException as b:

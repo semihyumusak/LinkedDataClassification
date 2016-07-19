@@ -25,36 +25,21 @@ with open('testDataset.tsv','r') as f:
 i = 0
 featureListTest = []
 featureListTrain = []
-endpoint = "http://dbpedia.org/sparql"
+#endpoint = "http://dbpedia.org/sparql"
+endpoint = "http://localhost:8891/sparql"
 # Initialize Feature Sets
 for row in trainingsetAttributes:
     URI = row[1].replace('"','')
     featureDictTrain = {"uri":URI}
     ID = row[0].replace('"','')
     featureDictTrain.update({"ID":ID})
-    populateFeatureAll(featureDictTrain,endpoint)
     featureListTrain.append(featureDictTrain)
-
-
-with open('trainingDataset.tsv','r') as f:
-    trainingsetLabels=[x.strip().split('\t')[6] for x in f][1:]
-
-X=featureListTrain
-y= trainingsetLabels
-
-from sklearn.svm import SVC
-from sklearn.feature_extraction import DictVectorizer
-vec = DictVectorizer()
-
-
-fit = vec.fit(X)
 
 for row in testsetAttributes:
     URI = row[1].replace('"','')
     featureDictTest = {"uri":URI}
     ID = row[0].replace('"','')
     featureDictTest.update({"ID":ID})
-    populateFeatureAll(featureDictTest)
     featureListTest.append(featureDictTest)
 
 if os.path.isfile('traindumpv3') and os.path.isfile('testdumpv3'):
@@ -65,16 +50,14 @@ if os.path.isfile('traindumpv3') and os.path.isfile('testdumpv3'):
 else:
     # Populate Features
     for featDict in featureListTrain:
-        populateFeatureAll(featDict, queryCache, cacheFile)
+            populateFeatureAll(featDict,endpoint)
     for featDict in featureListTest:
-        populateFeatureAll(featDict, queryCache, cacheFile)
+            populateFeatureAll(featDict,endpoint)
 
     with open('traindumpv3','wb') as f:
         pickle.dump(featureListTrain, f)
     with open('testdumpv3','wb') as f:
         pickle.dump(featureListTest, f)
-
-cacheFile.close()
 
 with open('trainingDataset.tsv','r') as f:
     trainingsetLabels=[x.strip().split('\t')[6] for x in f][1:]
