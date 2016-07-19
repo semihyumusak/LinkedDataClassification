@@ -22,6 +22,7 @@ with open('testDatasetLabeled.tsv','r') as f:
 #         queryCache.add(line.replace("\n",""))
 # cacheFile = open('querycache.txt', 'a',encoding='utf-8')
 
+
 i = 0
 featureListTest = []
 featureListTrain = []
@@ -94,6 +95,12 @@ clf.fit(X_train_counts.toarray(), y)
 #predict = clf.predict(X_test_counts.toarray())
 
 print("score " + str(clf.score(X_test_counts.toarray(),testsetLabels)))
+
+
+file = open("result.txt", "w")
+file.write("score " + str(clf.score(X_test_counts.toarray(),testsetLabels)))
+file.close()
+
 exit()
 #for v in predict:
 #    print(v)
