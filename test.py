@@ -9,10 +9,8 @@ from feature_generator_functions import getAttributeWithoutCaching
 
 
 # Load of attribute and test values
-with open('trainingDatasetSample.tsv','r') as f:
+with open('testDatasetSample.tsv','r') as f:
     trainingsetAttributes=[x.strip().split('\t') for x in f][1:]
-with open('testDataset.tsv','r') as f:
-    testsetAttributes=[x.strip().split('\t') for x in f][1:]
 
 # # Query caching prevents the algorithm to send DBpedia requests if it is already in the local storage
 # queryCache = set()
@@ -38,7 +36,7 @@ for row in trainingsetAttributes:
     featureListTrain.append(featureDictTrain)
 
 
-with open('trainingDatasetSample.tsv','r') as f:
+with open('testDatasetSample.tsv','r') as f:
     trainingsetLabels=[x.strip().split('\t')[6] for x in f][1:]
 
 X=featureListTrain
