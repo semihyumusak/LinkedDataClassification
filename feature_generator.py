@@ -25,8 +25,8 @@ with open('testDatasetLabeled.tsv','r') as f:
 i = 0
 featureListTest = []
 featureListTrain = []
-endpoint = "http://dbpedia.org/sparql"
-#endpoint = "http://localhost:8891/sparql"
+#endpoint = "http://dbpedia.org/sparql"
+endpoint = "http://localhost:8891/sparql"
 # Initialize Feature Sets
 for row in trainingsetAttributes:
     URI = row[1].replace('"','')
