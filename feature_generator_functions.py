@@ -15,19 +15,20 @@ def getAttributeWithoutCaching( sparqlquery, featDict,endpoint):
         sparql.setQuery(sparqlqueryConstruct)
         sparql.setReturnFormat(RDF)
         results = sparql.query().convert()
+        try:
+            for s,p,o in results:
+                #print(result)
+                #print ("%s %s %s"%s,p,o)
+                featDict.update({p:o})
+                #print (s +"\t"+p+"\t"+o)
+            #for result in results["results"]["bindings"]:
+            #    featDict.update({result["p"]["value"]:result["o"]["value"]})
+        except BaseException as b:
+            print (b)
     except BaseException as b:
         print (b)
         time.sleep(1)
-    try:
-        for s,p,o in results:
-            #print(result)
-            #print ("%s %s %s"%s,p,o)
-            featDict.update({p:o})
-            #print (s +"\t"+p+"\t"+o)
-        for result in results["results"]["bindings"]:
-            featDict.update({result["p"]["value"]:result["o"]["value"]})
-    except BaseException as b:
-        print (b)
+
 
 def getNumericAttributeLocalValue  (sparqlquery, featDict, high, low, name ):
 

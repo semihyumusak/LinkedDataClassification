@@ -25,14 +25,15 @@ with open('testDataset.tsv','r') as f:
 i = 0
 featureListTest = []
 featureListTrain = []
-
+#endpoint = "http://localhost:8891/sparql"
+endpoint = "http://www.dbpedia.org/sparql"
 # Initialize Feature Sets
 for row in trainingsetAttributes:
     URI = row[1].replace('"','')
     featureDictTrain = {"uri":URI}
     ID = row[0].replace('"','')
     featureDictTrain.update({"ID":ID})
-    populateFeatureAll(featureDictTrain,"http://localhost:8891/sparql")
+    populateFeatureAll(featureDictTrain,endpoint)
     print (i)
     i = i+1
     featureListTrain.append(featureDictTrain)
@@ -51,4 +52,4 @@ vec = DictVectorizer()
 
 fit = vec.fit(X)
 
-print (fit.fit.get_feature_names())
+print (fit.get_feature_names())
