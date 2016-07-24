@@ -109,30 +109,31 @@ def Main(endpoint, queries):
     PredictionScore(X,featureListTest,trainingsetLabels,testsetLabels,"test")
 
 
-#endpoint = "http://dbpedia.org/sparql"
-endpoint = "http://localhost:8891/sparql"
-# Main("http://dbpedia.org/sparql")
-# Main2("http://dbpedia.org/sparql")
-queries = []
-queries.append("SELECT ?p ?o WHERE { <URI> ?p ?o}")
-Main("http://dbpedia.org/sparql",queries)
+def run ():
+    #endpoint = "http://dbpedia.org/sparql"
+    endpoint = "http://localhost:8891/sparql"
+    # Main("http://dbpedia.org/sparql")
+    # Main2("http://dbpedia.org/sparql")
+    queries = []
+    queries.append("SELECT ?p ?o WHERE { <URI> ?p ?o}")
+    Main("http://dbpedia.org/sparql",queries)
 
-queries = []
-queries.append("SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}")
-Main("http://dbpedia.org/sparql",queries)
+    queries = []
+    queries.append("SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}")
+    Main("http://dbpedia.org/sparql",queries)
 
 
-queries = []
-queries.append("SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}")
-Main("http://dbpedia.org/sparql",queries)
+    queries = []
+    queries.append("SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}")
+    Main("http://dbpedia.org/sparql",queries)
 
-queries = []
-queries.append("SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}")
-queries.append("SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}")
-Main("http://dbpedia.org/sparql",queries)
+    queries = []
+    queries.append("SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}")
+    queries.append("SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}")
+    Main("http://dbpedia.org/sparql",queries)
 
-queries = []
-queries.append("SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}")
-queries.append("SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}")
-queries.append("SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}")
-Main("http://dbpedia.org/sparql",queries)
+    queries = []
+    queries.append("SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}")
+    queries.append("SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}")
+    queries.append("SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}")
+    Main("http://dbpedia.org/sparql",queries)

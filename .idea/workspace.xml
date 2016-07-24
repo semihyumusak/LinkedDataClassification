@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70c3d3f5-0648-4ef5-9998-603040b126b9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/callLocalServer.py" afterPath="$PROJECT_DIR$/callLocalServer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feature_generator.py" afterPath="$PROJECT_DIR$/feature_generator.py" />
     </list>
     <ignored path="KNOW2016-improve.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,8 +28,8 @@
       <file leaf-file-name="feature_generator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feature_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-47.73077">
-              <caret line="82" column="16" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -78,8 +80,8 @@
       <file leaf-file-name="callLocalServer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/callLocalServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40652174">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.073913045">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -106,9 +108,9 @@
         <option value="$PROJECT_DIR$/testDatasetLabeledSample.tsv" />
         <option value="$PROJECT_DIR$/test1.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/feature_generator.py" />
         <option value="$PROJECT_DIR$/output.txt" />
         <option value="$PROJECT_DIR$/feature_generator_functions.py" />
+        <option value="$PROJECT_DIR$/feature_generator.py" />
         <option value="$PROJECT_DIR$/callLocalServer.py" />
       </list>
     </option>
@@ -173,7 +175,7 @@
       <recent name="D:\Dropbox\Code\Python Workspace\KNOW2016-improve" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.feature_generator">
+  <component name="RunManager" selected="Python.callLocalServer">
     <configuration default="false" name="feature_generator" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -390,9 +392,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.feature_generator" />
-        <item index="1" class="java.lang.String" itemvalue="Python.feature_generator_functions" />
-        <item index="2" class="java.lang.String" itemvalue="Python.callLocalServer" />
+        <item index="0" class="java.lang.String" itemvalue="Python.callLocalServer" />
+        <item index="1" class="java.lang.String" itemvalue="Python.feature_generator" />
+        <item index="2" class="java.lang.String" itemvalue="Python.feature_generator_functions" />
         <item index="3" class="java.lang.String" itemvalue="Python.test" />
         <item index="4" class="java.lang.String" itemvalue="Python.graph" />
       </list>
@@ -535,6 +537,20 @@
           <line>108</line>
           <option name="timeStamp" value="121" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/callLocalServer.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/callLocalServer.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/callLocalServer.py</url>
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -543,7 +559,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="122" />
+      <option name="time" value="125" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -755,14 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda3/Lib/http/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="826" column="0" selection-start-line="826" selection-start-column="0" selection-end-line="826" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testDatasetSample.tsv">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -781,18 +789,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Anaconda3/Lib/http/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="826" column="0" selection-start-line="826" selection-start-column="0" selection-end-line="826" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/feature_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-47.73077">
-          <caret line="82" column="16" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/callLocalServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40652174">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.073913045">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
