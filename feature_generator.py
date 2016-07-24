@@ -24,7 +24,8 @@ def populateFeatureAll (featDict, endpoint, queries):
 
 
 def Main(endpoint, queries):
-    outFile = open('output.txt', 'a',encoding='utf-8')
+    import io
+    outFile = open('output.txt', 'a')
     print ("---------------------------------------")
     outFile.write("---------------------------------------"+"\n")
 

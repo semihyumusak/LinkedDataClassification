@@ -120,7 +120,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.feature_selection import SelectKBest, SelectPercentile,chi2
 def PredictionScore (X_train,X_test,y_train,y_test,header):
 
-    outFile = open('output.txt', 'a',encoding='utf-8')
+    outFile = open('output.txt', 'a')
 
     from sklearn.svm import SVC
     from sklearn.feature_extraction import DictVectorizer

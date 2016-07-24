@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70c3d3f5-0648-4ef5-9998-603040b126b9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/callLocalServer.py" afterPath="$PROJECT_DIR$/callLocalServer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feature_generator.py" afterPath="$PROJECT_DIR$/feature_generator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feature_generator_functions.py" afterPath="$PROJECT_DIR$/feature_generator_functions.py" />
     </list>
     <ignored path="KNOW2016-improve.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +28,8 @@
       <file leaf-file-name="feature_generator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/feature_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59921414">
-              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="27" column="31" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -57,8 +58,8 @@
       <file leaf-file-name="feature_generator_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feature_generator_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.384615">
-              <caret line="122" column="54" selection-start-line="122" selection-start-column="3" selection-end-line="122" selection-end-column="54" />
+            <state vertical-scroll-proportion="-2.9230769">
+              <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -79,8 +80,8 @@
       <file leaf-file-name="callLocalServer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/callLocalServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4693878">
-              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+            <state vertical-scroll-proportion="-3.2692308">
+              <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -108,9 +109,9 @@
         <option value="$PROJECT_DIR$/test1.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/output.txt" />
-        <option value="$PROJECT_DIR$/feature_generator_functions.py" />
         <option value="$PROJECT_DIR$/callLocalServer.py" />
         <option value="$PROJECT_DIR$/feature_generator.py" />
+        <option value="$PROJECT_DIR$/feature_generator_functions.py" />
       </list>
     </option>
   </component>
@@ -469,9 +470,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -533,22 +534,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/feature_generator.py</url>
-          <line>115</line>
+          <line>116</line>
           <option name="timeStamp" value="121" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/callLocalServer.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="122" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/callLocalServer.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="123" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/callLocalServer.py</url>
-          <option name="timeStamp" value="124" />
+          <url>file://$PROJECT_DIR$/feature_generator.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="125" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -558,7 +550,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="125" />
+      <option name="time" value="126" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -786,18 +778,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/-2036615904/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.322201">
+          <caret line="339" column="4" selection-start-line="339" selection-start-column="4" selection-end-line="339" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/callLocalServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4693878">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/feature_generator_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.384615">
-          <caret line="122" column="54" selection-start-line="122" selection-start-column="3" selection-end-line="122" selection-end-column="54" />
+        <state vertical-scroll-proportion="-2.9230769">
+          <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -806,8 +806,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/feature_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59921414">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="31" />
           <folding />
         </state>
       </provider>
