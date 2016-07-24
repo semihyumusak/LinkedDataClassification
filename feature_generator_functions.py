@@ -120,6 +120,8 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.feature_selection import SelectKBest, SelectPercentile,chi2
 def PredictionScore (X_train,X_test,y_train,y_test,header):
 
+    outFile = open('output.txt', 'a',encoding='utf-8')
+
     from sklearn.svm import SVC
     from sklearn.feature_extraction import DictVectorizer
     vec = DictVectorizer()
@@ -164,6 +166,8 @@ def PredictionScore (X_train,X_test,y_train,y_test,header):
                     #print (X_test[i]['ID']+"\t"+y_test[i]+"\t"+predict[i])
             except BaseException as b:
                     print (b)
-            print (name+"\t"+header+"\t"+str(accuracy))
+            print (name+"\t"+"\t"+str(accuracy))
+            outFile.write(name+"\t"+"\t"+str(accuracy)+"\n")
         except BaseException as b:
             print (b)
+    outFile.close()
