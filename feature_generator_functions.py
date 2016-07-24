@@ -8,11 +8,6 @@ def is_number(s):
         return False
 import re
 from SPARQLWrapper import SPARQLWrapper, JSON,RDF, POST, GET, SELECT, CONSTRUCT, ASK, DESCRIBE
-def populateFeatureAll (featDict, endpoint):
-    URI = featDict['uri']
-    #getAttributeWithoutCaching("SELECT ?p ?o WHERE { <"+featDict['uri']+"> ?p ?o}",featDict,endpoint)
-    getAttributeWithoutCaching("SELECT ?p ?o WHERE { <"+featDict['uri']+"> ?p ?o}",featDict,endpoint)
-    getAttributeWithoutCaching("SELECT ?p ?o WHERE { <"+featDict['uri']+"> ?p1 ?o1. ?o1 ?p ?o}",featDict,endpoint)
 
 def getAttributeWithoutCaching( sparqlquery, featDict,endpoint):
     sparqlqueryBase = sparqlquery[sparqlquery.index("{") + 1:sparqlquery.rindex("}")]
@@ -30,16 +25,18 @@ def getAttributeWithoutCaching( sparqlquery, featDict,endpoint):
                 #print (s +"\t"+p+"\t"+o)
             for result in results["results"]["bindings"]:
                 if result["o"]["value"] is int or type(result["o"]["value"]) is float :
-                    if abs(result["o"]["value"])<100000:
-                        featDict.update({result["p"]["value"]:abs(result["o"]["value"])})
-                    else:
-                        print (result["p"]["value"] +" neglected")
+                    a=0
+                    # if abs(result["o"]["value"])<100000:
+                    #     featDict.update({result["p"]["value"]:abs(result["o"]["value"])})
+                    # else:
+                    #     print (result["p"]["value"] +" neglected")
                 else :
                     if is_number(result["o"]["value"]):
-                        if not result["p"]["value"].endswith("ID") and abs(int(float(result["o"]["value"])))<100000:
-                            featDict.update({result["p"]["value"]:abs(int(float(result["o"]["value"])))})
-                        else:
-                            print (result["p"]["value"] +" neglected")
+                        a=0
+                        # if not result["p"]["value"].endswith("ID") and abs(int(float(result["o"]["value"])))<100000:
+                        #     featDict.update({result["p"]["value"]:abs(int(float(result["o"]["value"])))})
+                        # else:
+                        #     print (result["p"]["value"] +" neglected")
                     else:
                         featDict.update({result["p"]["value"]:hashlib.md5(result["o"]["value"].encode("UTF8")).hexdigest()})
         except BaseException as b:
@@ -150,10 +147,9 @@ def PredictionScore (X_train,X_test,y_train,y_test,header):
         try:
             accuracy = 0.0
 
-
             vec = DictVectorizer()
             fit = vec.fit(X_train)
-            select = SelectPercentile(score_func=chi2,percentile=1).fit(fit.transform(X_train),y_train)
+            select = SelectPercentile(score_func=chi2,percentile=10).fit(fit.transform(X_train),y_train)
             fit.restrict (select.get_support())
             X_train_counts = fit.transform(X_train)
             X_test_counts = fit.transform(X_test)
