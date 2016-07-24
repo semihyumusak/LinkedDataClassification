@@ -24,11 +24,18 @@ def populateFeatureAll (featDict, endpoint, queries):
 
 
 def Main(endpoint, queries):
+    outFile = open('output.txt', 'a',encoding='utf-8')
     print ("---------------------------------------")
+    outFile.write("---------------------------------------"+"\n")
+
     allqueriesstr= ""
     for query in queries:
         print(query)
+        outFile.write(query+"\n")
         allqueriesstr += str(query)
+
+    outFile.close()
+
     import hashlib
     id = str(hashlib.md5(allqueriesstr.encode("UTF8")).hexdigest())
     import os.path
