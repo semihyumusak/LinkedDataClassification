@@ -84,7 +84,7 @@ def Main(endpoint, queries):
     else:
         for featDict in featureListTest:
             i= i+1
-            # print(i)
+            print(i)
             populateFeatureAll(featDict,endpoint,queries)
 
         with open('dumps/testdump'+id,'wb') as f:
@@ -98,7 +98,7 @@ def Main(endpoint, queries):
         # Populate Features
         for featDict in featureListTrain:
             i= i+1
-            # print(i)
+            print(i)
             populateFeatureAll(featDict,endpoint,queries)
 
         with open('dumps/traindump'+id,'wb') as f:
