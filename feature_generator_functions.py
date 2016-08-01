@@ -9,41 +9,136 @@ def is_number(s):
 import re
 from SPARQLWrapper import SPARQLWrapper, JSON,RDF, POST, GET, SELECT, CONSTRUCT, ASK, DESCRIBE
 
-def getAttributeWithoutCaching( sparqlquery, featDict,endpoint):
-    sparqlqueryBase = sparqlquery[sparqlquery.index("{") + 1:sparqlquery.rindex("}")]
-    sparqlqueryConstruct = "CONSTRUCT {"+sparqlqueryBase+"} WHERE {"+sparqlqueryBase+"}"
-    try:
-        sparql = SPARQLWrapper(endpoint)
-        sparql.setQuery(sparqlqueryConstruct)
-        sparql.setReturnFormat(JSON)
-        results = sparql.query().convert()
+
+class propertyValues:
+    max = 0.0
+    min = 99999999999.0
+    total = 0.0
+    count = 0.0
+    lowLimit = 0.0
+    highLimit = 0.0
+
+def getCountAttributeWithoutCaching (sparqlqueryTuple,URI, featDict, endpoint, propertyStats,previousDump):
+
+    import hashlib
+    hashid = str(hashlib.md5(sparqlqueryTuple[0].encode("UTF8")).hexdigest())
+    isCached = 0
+    for dump in previousDump:
+        if dump[0] == hashid:
+            isCached = 1
+            for rec in dump[1]:
+                if featDict["ID"] == rec["ID"]:
+                    for r in rec.items():
+                        featDict.update({r[0]:r[1]})
+    if not isCached:
+        sparqlquery = sparqlqueryTuple[0].replace("URI",URI)
+        queryid = str(sparqlqueryTuple[1])
+        sparqlqueryBase = sparqlquery[sparqlquery.index("{") + 1:sparqlquery.rindex("}")]
+        sparqlqueryConstruct = "CONSTRUCT {"+sparqlqueryBase+"} WHERE {"+sparqlqueryBase+"}"
+        p = propertyValues()
         try:
-            #for s,p,o in results:
-                #print(result)
-                #print ("%s %s %s"%s,p,o)
-#                featDict.update({p:o})
-                #print (s +"\t"+p+"\t"+o)
-            for result in results["results"]["bindings"]:
-                if result["o"]["value"] is int or type(result["o"]["value"]) is float :
-                    a=0
-                    # if abs(result["o"]["value"])<100000:
-                    #     featDict.update({result["p"]["value"]:abs(result["o"]["value"])})
-                    # else:
-                    #     print (result["p"]["value"] +" neglected")
-                else :
-                    if is_number(result["o"]["value"]):
+            sparql = SPARQLWrapper(endpoint)
+            sparql.setQuery(sparqlquery)
+            sparql.setReturnFormat(JSON)
+            results = sparql.query().convert()
+            try:
+                #for s,p,o in results:
+                    #print(result)
+                    #print ("%s %s %s"%s,p,o)
+    #                featDict.update({p:o})
+                    #print (s +"\t"+p+"\t"+o)
+                for result in results["results"]["bindings"]:
+                    if result["o"]["value"] is int or type(result["o"]["value"]) is float :
                         a=0
-                        # if not result["p"]["value"].endswith("ID") and abs(int(float(result["o"]["value"])))<100000:
-                        #     featDict.update({result["p"]["value"]:abs(int(float(result["o"]["value"])))})
+
+
+
+                        # if abs(result["o"]["value"])<100000:
+                        #     featDict.update({result["p"]["value"]:abs(result["o"]["value"])})
                         # else:
                         #     print (result["p"]["value"] +" neglected")
-                    else:
-                        featDict.update({result["p"]["value"]:hashlib.md5(result["o"]["value"].encode("UTF8")).hexdigest()})
+                    else :
+                        if is_number(result["o"]["value"]):
+                            a=0
+                            if result["p"]["value"]+"_count"+queryid in propertyStats :
+                                p = propertyStats[result["p"]["value"]+"_count"+queryid]
+                                #print (p.highLimit)
+                            if not result["p"]["value"].endswith("ID"): #and abs(int(float(result["o"]["value"])))<100000:
+                                if float(result["o"]["value"])>=p.highLimit:
+                                    featDict.update({result["p"]["value"]+"_count"+queryid:"high"})
+                                else:
+                                    if float(result["o"]["value"])>=p.lowLimit:
+                                        featDict.update({result["p"]["value"]+"_count"+queryid:"medium"})
+                                    else:
+                                        featDict.update({result["p"]["value"]+"_count"+queryid:"low"})
+
+                            #     featDict.update({result["p"]["value"]:abs(int(float(result["o"]["value"])))})
+                            # else:
+                            #     print (result["p"]["value"] +" neglected")
+                        else:
+                            featDict.update({result["p"]["value"]:hashlib.md5(result["o"]["value"].encode("UTF8")).hexdigest()})
+            except BaseException as b:
+                print (b)
         except BaseException as b:
             print (b)
-    except BaseException as b:
-        print (b)
-        time.sleep(1)
+            time.sleep(1)
+
+
+
+
+def getAttributeWithoutCaching( sparqlquery, URI, featDict,endpoint,previousDump):
+
+    import hashlib
+    hashid = str(hashlib.md5(sparqlquery.encode("UTF8")).hexdigest())
+    isCached = 0
+    for dump in previousDump:
+        if dump[0] == hashid:
+            isCached = 1
+            for rec in dump[1]:
+                if featDict["ID"] == rec["ID"]:
+                    for r in rec.items():
+                        featDict.update({r[0]:r[1]})
+    if not isCached:
+        sparqlquery = sparqlquery.replace("URI",URI)
+        sparqlqueryBase = sparqlquery[sparqlquery.index("{") + 1:sparqlquery.rindex("}")]
+        sparqlqueryConstruct = "CONSTRUCT {"+sparqlqueryBase+"} WHERE {"+sparqlqueryBase+"}"
+        p = propertyValues()
+        try:
+            sparql = SPARQLWrapper(endpoint)
+            sparql.setQuery(sparqlqueryConstruct)
+            sparql.setReturnFormat(JSON)
+            results = sparql.query().convert()
+            try:
+                #for s,p,o in results:
+                    #print(result)
+                    #print ("%s %s %s"%s,p,o)
+    #                featDict.update({p:o})
+                    #print (s +"\t"+p+"\t"+o)
+                for result in results["results"]["bindings"]:
+                    if result["o"]["value"] is int or type(result["o"]["value"]) is float :
+                        a=0
+
+
+
+                        # if abs(result["o"]["value"])<100000:
+                        #     featDict.update({result["p"]["value"]:abs(result["o"]["value"])})
+                        # else:
+                        #     print (result["p"]["value"] +" neglected")
+                    else :
+                        if is_number(result["o"]["value"]):
+                            a=0
+
+
+                            #     featDict.update({result["p"]["value"]:abs(int(float(result["o"]["value"])))})
+                            # else:
+                            #     print (result["p"]["value"] +" neglected")
+                        else:
+                            featDict.update({result["p"]["value"]:hashlib.md5(result["o"]["value"].encode("UTF8")).hexdigest()})
+            except BaseException as b:
+                print (b)
+        except BaseException as b:
+            print (b)
+            time.sleep(1)
 
 
 def getNumericAttributeLocalValue  (sparqlquery, featDict, high, low, name ):

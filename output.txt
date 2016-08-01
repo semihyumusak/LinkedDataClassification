@@ -1,0 +1,791 @@
+---------------------------------------
+SELECT ?p1 COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+Linear SVM		0.68125
+Nearest Neighbors		0.55
+RBF SVM		0.490625
+Decision Tree		0.584375
+Random Forest		0.5125
+AdaBoost		0.6125
+Naive Bayes		0.73125
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+Linear SVM		0.790625
+Nearest Neighbors		0.6625
+RBF SVM		0.5125
+Decision Tree		0.690625
+Random Forest		0.528125
+AdaBoost		0.703125
+Naive Bayes		0.75625
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+Linear SVM		0.715625
+Nearest Neighbors		0.64375
+RBF SVM		0.45625
+Decision Tree		0.590625
+Random Forest		0.6
+AdaBoost		0.61875
+Naive Bayes		0.803125
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+Linear SVM		0.790625
+Nearest Neighbors		0.6625
+RBF SVM		0.515625
+Decision Tree		0.69375
+Random Forest		0.584375
+AdaBoost		0.703125
+Naive Bayes		0.75625
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+Linear SVM		0.8
+Nearest Neighbors		0.634375
+RBF SVM		0.50625
+Decision Tree		0.678125
+Random Forest		0.55
+AdaBoost		0.684375
+Naive Bayes		0.759375
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+Linear SVM		0.68125
+Nearest Neighbors		0.55
+RBF SVM		0.490625
+Decision Tree		0.578125
+Random Forest		0.50625
+AdaBoost		0.6125
+Naive Bayes		0.73125
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+Linear SVM		0.790625
+Nearest Neighbors		0.6625
+RBF SVM		0.5125
+Decision Tree		0.684375
+Random Forest		0.55
+AdaBoost		0.70625
+Naive Bayes		0.75625
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+Linear SVM		0.715625
+Nearest Neighbors		0.64375
+RBF SVM		0.45625
+Decision Tree		0.58125
+Random Forest		0.45
+AdaBoost		0.615625
+Naive Bayes		0.803125
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+Linear SVM		0.790625
+Nearest Neighbors		0.6625
+RBF SVM		0.515625
+Decision Tree		0.690625
+Random Forest		0.53125
+AdaBoost		0.703125
+Naive Bayes		0.75625
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+Linear SVM		0.8
+Nearest Neighbors		0.634375
+RBF SVM		0.50625
+Decision Tree		0.675
+Random Forest		0.521875
+AdaBoost		0.684375
+Naive Bayes		0.759375
+---------------------------------------
+SELECT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+N1
+---------------------------------------
+N1
+---------------------------------------
+N1
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+Linear SVM		0.68125
+Nearest Neighbors		0.55
+RBF SVM		0.490625
+Decision Tree		0.578125
+Random Forest		0.528125
+AdaBoost		0.6125
+Naive Bayes		0.73125
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+Linear SVM		0.65625
+Nearest Neighbors		0.5875
+RBF SVM		0.559375
+Decision Tree		0.6
+Random Forest		0.6375
+AdaBoost		0.68125
+Naive Bayes		0.55
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+Linear SVM		0.68125
+Nearest Neighbors		0.5625
+RBF SVM		0.490625
+Decision Tree		0.590625
+Random Forest		0.5
+AdaBoost		0.621875
+Naive Bayes		0.746875
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+Linear SVM		0.7875
+Nearest Neighbors		0.63125
+RBF SVM		0.5125
+Decision Tree		0.69375
+Random Forest		0.534375
+AdaBoost		0.6875
+Naive Bayes		0.775
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+Linear SVM		0.775
+Nearest Neighbors		0.628125
+RBF SVM		0.509375
+Decision Tree		0.684375
+Random Forest		0.521875
+AdaBoost		0.7
+Naive Bayes		0.778125
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+Linear SVM		0.796875
+Nearest Neighbors		0.675
+RBF SVM		0.5125
+Decision Tree		0.678125
+Random Forest		0.54375
+AdaBoost		0.690625
+Naive Bayes		0.771875
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+Linear SVM		0.825
+Nearest Neighbors		0.653125
+RBF SVM		0.6125
+Decision Tree		0.71875
+Random Forest		0.525
+AdaBoost		0.734375
+Naive Bayes		0.725
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+Linear SVM		0.65625
+Nearest Neighbors		0.5875
+RBF SVM		0.559375
+Decision Tree		0.603125
+Random Forest		0.61875
+AdaBoost		0.68125
+Naive Bayes		0.55
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+Linear SVM		0.68125
+Nearest Neighbors		0.5625
+RBF SVM		0.490625
+Decision Tree		0.59375
+Random Forest		0.53125
+AdaBoost		0.621875
+Naive Bayes		0.746875
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+Linear SVM		0.7875
+Nearest Neighbors		0.63125
+RBF SVM		0.5125
+Decision Tree		0.69375
+Random Forest		0.546875
+AdaBoost		0.6875
+Naive Bayes		0.775
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+Linear SVM		0.775
+Nearest Neighbors		0.628125
+RBF SVM		0.509375
+Decision Tree		0.690625
+Random Forest		0.55
+AdaBoost		0.7
+Naive Bayes		0.778125
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+Linear SVM		0.796875
+Nearest Neighbors		0.675
+RBF SVM		0.5125
+Decision Tree		0.675
+Random Forest		0.546875
+AdaBoost		0.690625
+Naive Bayes		0.771875
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+Linear SVM		0.825
+Nearest Neighbors		0.653125
+RBF SVM		0.6125
+Decision Tree		0.721875
+Random Forest		0.575
+AdaBoost		0.734375
+Naive Bayes		0.725
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+Linear SVM		0.75
+Nearest Neighbors		0.6125
+RBF SVM		0.50625
+Decision Tree		0.625
+Random Forest		0.603125
+AdaBoost		0.71875
+Naive Bayes		0.578125
+Linear SVM		0.75
+Nearest Neighbors		0.6125
+RBF SVM		0.50625
+Decision Tree		0.628125
+Random Forest		0.603125
+AdaBoost		0.71875
+Naive Bayes		0.578125
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+Linear SVM		0.65625
+Nearest Neighbors		0.5875
+RBF SVM		0.559375
+Decision Tree		0.6
+Random Forest		0.63125
+AdaBoost		0.68125
+Naive Bayes		0.55
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+Linear SVM		0.68125
+Nearest Neighbors		0.5625
+RBF SVM		0.490625
+Decision Tree		0.590625
+Random Forest		0.5125
+AdaBoost		0.621875
+Naive Bayes		0.746875
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+Linear SVM		0.7875
+Nearest Neighbors		0.63125
+RBF SVM		0.5125
+Decision Tree		0.69375
+Random Forest		0.54375
+AdaBoost		0.6875
+Naive Bayes		0.775
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+Linear SVM		0.775
+Nearest Neighbors		0.628125
+RBF SVM		0.509375
+Decision Tree		0.684375
+Random Forest		0.58125
+AdaBoost		0.7
+Naive Bayes		0.778125
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+Linear SVM		0.796875
+Nearest Neighbors		0.675
+RBF SVM		0.5125
+Decision Tree		0.68125
+Random Forest		0.5375
+AdaBoost		0.690625
+Naive Bayes		0.771875
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+Linear SVM		0.825
+Nearest Neighbors		0.653125
+RBF SVM		0.6125
+Decision Tree		0.715625
+Random Forest		0.58125
+AdaBoost		0.734375
+Naive Bayes		0.725
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p 
+---------------------------------------
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p 
+---------------------------------------
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p 
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p 
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p 
+Linear SVM		0.721875
+Nearest Neighbors		0.63125
+RBF SVM		0.509375
+Decision Tree		0.625
+Random Forest		0.65
+AdaBoost		0.703125
+Naive Bayes		0.625
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+Linear SVM		0.75
+Nearest Neighbors		0.6125
+RBF SVM		0.50625
+Decision Tree		0.61875
+Random Forest		0.615625
+AdaBoost		0.71875
+Naive Bayes		0.578125
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+Linear SVM		0.65625
+Nearest Neighbors		0.5875
+RBF SVM		0.559375
+Decision Tree		0.603125
+Random Forest		0.63125
+AdaBoost		0.68125
+Naive Bayes		0.55
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p 
+Linear SVM		0.68125
+Nearest Neighbors		0.5625
+RBF SVM		0.490625
+Decision Tree		0.59375
+Random Forest		0.50625
+AdaBoost		0.621875
+Naive Bayes		0.746875
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+Linear SVM		0.7875
+Nearest Neighbors		0.63125
+RBF SVM		0.5125
+Decision Tree		0.696875
+Random Forest		0.54375
+AdaBoost		0.690625
+Naive Bayes		0.775
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p 
+Linear SVM		0.775
+Nearest Neighbors		0.628125
+RBF SVM		0.509375
+Decision Tree		0.68125
+Random Forest		0.525
+AdaBoost		0.7
+Naive Bayes		0.778125
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p 
+Linear SVM		0.796875
+Nearest Neighbors		0.675
+RBF SVM		0.5125
+Decision Tree		0.678125
+Random Forest		0.5375
+AdaBoost		0.690625
+Naive Bayes		0.771875
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p 
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p 
+Linear SVM		0.784375
+Nearest Neighbors		0.634375
+RBF SVM		0.509375
+Decision Tree		0.665625
+Random Forest		0.584375
+AdaBoost		0.753125
+Naive Bayes		0.7875
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p 
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p 
+Linear SVM		0.784375
+Nearest Neighbors		0.634375
+RBF SVM		0.509375
+Decision Tree		0.66875
+Random Forest		0.56875
+AdaBoost		0.753125
+Naive Bayes		0.7875
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+Linear SVM		0.65625
+Nearest Neighbors		0.5875
+RBF SVM		0.559375
+Decision Tree		0.603125
+Random Forest		0.59375
+AdaBoost		0.68125
+Naive Bayes		0.55
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+Linear SVM		0.65625
+Nearest Neighbors		0.5875
+RBF SVM		0.559375
+Decision Tree		0.603125
+Random Forest		0.684375
+AdaBoost		0.68125
+Naive Bayes		0.55
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+Linear SVM		0.75
+Nearest Neighbors		0.6125
+RBF SVM		0.50625
+Decision Tree		0.61875
+Random Forest		0.621875
+AdaBoost		0.71875
+Naive Bayes		0.578125
+---------------------------------------
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p
+Linear SVM		0.721875
+Nearest Neighbors		0.63125
+RBF SVM		0.509375
+Decision Tree		0.621875
+Random Forest		0.646875
+AdaBoost		0.703125
+Naive Bayes		0.625
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+Linear SVM		0.68125
+Nearest Neighbors		0.5625
+RBF SVM		0.490625
+Decision Tree		0.59375
+Random Forest		0.546875
+AdaBoost		0.621875
+Naive Bayes		0.746875
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+Linear SVM		0.7875
+Nearest Neighbors		0.63125
+RBF SVM		0.5125
+Decision Tree		0.690625
+Random Forest		0.528125
+AdaBoost		0.6875
+Naive Bayes		0.775
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+Linear SVM		0.775
+Nearest Neighbors		0.628125
+RBF SVM		0.509375
+Decision Tree		0.6875
+Random Forest		0.55625
+AdaBoost		0.7
+Naive Bayes		0.778125
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+Linear SVM		0.65625
+Nearest Neighbors		0.5875
+RBF SVM		0.559375
+Decision Tree		0.6
+Random Forest		0.6375
+AdaBoost		0.68125
+Naive Bayes		0.55
+---------------------------------------
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+Linear SVM		0.75
+Nearest Neighbors		0.6125
+RBF SVM		0.50625
+Decision Tree		0.625
+Random Forest		0.65
+AdaBoost		0.71875
+Naive Bayes		0.578125
+---------------------------------------
+SELECT ?p COUNT(?o3) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o3 } GROUP BY ?p
+Linear SVM		0.721875
+Nearest Neighbors		0.63125
+RBF SVM		0.509375
+Decision Tree		0.6125
+Random Forest		0.63125
+AdaBoost		0.703125
+Naive Bayes		0.625
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+Linear SVM		0.68125
+Nearest Neighbors		0.5625
+RBF SVM		0.490625
+Decision Tree		0.59375
+Random Forest		0.509375
+AdaBoost		0.621875
+Naive Bayes		0.746875
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+Linear SVM		0.7875
+Nearest Neighbors		0.63125
+RBF SVM		0.5125
+Decision Tree		0.690625
+Random Forest		0.55
+AdaBoost		0.6875
+Naive Bayes		0.775
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+Linear SVM		0.775
+Nearest Neighbors		0.628125
+RBF SVM		0.509375
+Decision Tree		0.684375
+Random Forest		0.58125
+AdaBoost		0.7
+Naive Bayes		0.778125
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+Linear SVM		0.796875
+Nearest Neighbors		0.675
+RBF SVM		0.5125
+Decision Tree		0.6875
+Random Forest		0.521875
+AdaBoost		0.690625
+Naive Bayes		0.771875
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
+---------------------------------------
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o}
+SELECT DISTINCT ?p ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p2 ?o2. ?o2 ?p ?o}
+SELECT ?p COUNT(?o1) as ?o WHERE { <URI> ?p ?o1} GROUP BY ?p
+SELECT ?p COUNT(?o2) as ?o WHERE { <URI> ?p1 ?o1. ?o1 ?p ?o2} GROUP BY ?p
